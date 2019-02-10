@@ -1,6 +1,7 @@
 # ireckonu
 
 ## How to run:
+
 npm i
 
 ng s -o
@@ -14,6 +15,12 @@ The application use two databases:
 You can change between the two databases, by comment/uncomment a single line of code in the file ..src\app\db\db.service.ts
 
 In order for the events to be sorted on TODAY, THIS WEEK and OTHER category, you need to change the dateTime field value accordingly.
+
+## Testing
+
+The application has unit tests, so to run them, execute
+
+ng test
 
 ## Responsiveness
 
