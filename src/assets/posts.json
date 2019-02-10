@@ -1,0 +1,18 @@
+{
+  "posts":[
+    {
+      "name": "Lucien van Geffen",
+      "avatar": "./assets/images/01.png",
+      "sharedLink": true,
+      "highfives": 14,
+      "comment": "How to ride like a real Dutchie!"
+    }, 
+    {
+      "name": "Bruno Dagestino",
+      "avatar": "./assets/images/02.png",
+      "sharedLink": false,
+      "comments": 1,
+      "comment": "It is possible to leave after an hour? I would love to join, but I have another appointment later that evening..."
+    }
+  ]  
+}

@@ -1,0 +1,21 @@
+<span class="card-group">
+  <div class="header"></div> 
+  <div class="title">{{title}}</div>   
+
+  <ion-row>
+    <ion-col>
+      <ion-grid class="grid" *ngIf="events?.length">
+        <div *ngFor="let event of events" [ngClass]="{'selected': selected && id === event?.id &&  lastClickedType === type, 'unselected': !selected || id !== event?.id || lastClickedType !== type}">
+          <app-card (click)="onClick(event)" [event]="event"></app-card>
+        </div>      
+      </ion-grid>    
+      <ion-grid *ngIf="!events?.length">
+        <ion-row>
+          <ion-col>
+            <div class="no-events">No events</div>
+          </ion-col>
+        </ion-row>      
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+</span>

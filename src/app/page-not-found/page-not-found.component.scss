@@ -1,0 +1,14 @@
+.content {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  min-height: 24em;
+  justify-content: center;
+  height: 100%;
+
+  .text {
+    align-self: center;
+    font-weight: bold;
+    font-size: 10vw;
+  }
+}

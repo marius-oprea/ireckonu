@@ -1,0 +1,67 @@
+<span class="post">
+  <div class="header"></div>
+  <ion-grid class="grid">
+    <ion-row>
+      <ion-col size="12">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="2">
+              <img class="avatar" [src]="item?.avatar"><img>
+            </ion-col>
+            <ion-col size="10">
+              <ion-grid>
+                <ion-row>
+                  <span id="name" class="name">
+                    {{item?.name}}
+                  </span>
+                  <span class="shared-link" *ngIf="item?.sharedLink">
+                    shared a link.
+                  </span>        
+                </ion-row>
+                <ion-row class="time">
+                  <ion-icon name="time"></ion-icon>
+                  14 min ago
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <div class="comment">
+        {{item?.comment}}
+      </div>
+      <ion-icon class="arrow" name="arrow-dropdown" color="medium"></ion-icon>
+    </ion-row>
+    <ion-row class="link" *ngIf="item?.sharedLink">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/sEON08d76oE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </ion-row>
+    <ion-row>
+      <span class="highfives" *ngIf="item?.highfives">
+        <ion-icon class="icon round green" name="hand"></ion-icon>
+        <span class="icon-text">{{item?.highfives}}</span>
+      </span>
+      <span class="highfives" *ngIf="item?.comments">
+        <ion-icon class="icon round blue" name="chatboxes"></ion-icon>
+        <span class="icon-text">{{item?.comments}}</span>
+      </span>
+    </ion-row>
+    <ion-row>
+      <ion-col class="center feedback" size="6">
+        <ion-icon class="icon" name="hand"></ion-icon>
+        <div class="text">High five</div>    
+      </ion-col>
+      <ion-col class="center feedback" size="6">
+        <ion-icon class="icon" name="chatboxes"></ion-icon>
+        <div class="text">Comment</div>    
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</span>

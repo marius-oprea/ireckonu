@@ -1,0 +1,13 @@
+<span class="container">
+  <div class="scheduler" #scheduler>
+    {{text}}
+  </div>
+  <span *ngIf="show" class="show-more" (click)="onToggleShow()">
+    <span>Show more</span>
+    <ion-icon name="arrow-dropdown"></ion-icon>
+  </span>
+  <span *ngIf="!show" class="show-more" (click)="onToggleShow()">
+    <span>Hide</span>
+    <ion-icon name="arrow-dropup"></ion-icon>
+  </span>
+</span>

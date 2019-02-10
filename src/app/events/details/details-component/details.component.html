@@ -1,0 +1,69 @@
+<!--
+<ion-header no-border>
+  <ion-toolbar [class.show-background]="showToolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>  
+-->
+<ion-content fullscreen class="details-container">  
+  <ion-grid>    
+    <ion-row>
+      <ion-img [src]="event?.image"></ion-img>          
+
+      <ion-buttons (click)="onBack()" class="back">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-buttons>      
+      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="title">{{event?.title}}</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="description">Public event - {{event?.description}}</div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="details">      
+    </ion-row>
+    <ion-row class="details">
+      <ion-icon name="time"></ion-icon>      
+      <div class="info">{{getWhen(event?.dateTime)}}</div>
+    </ion-row>
+    <ion-row class="details">
+      <ion-icon name="pin"></ion-icon>      
+      <div class="info">Location unknown</div>  
+    </ion-row>
+    <ion-row class="details">
+      <ion-icon name="timer"></ion-icon>
+      <div class="info">{{event?.status | titlecase}}</div>
+    </ion-row>
+    <ion-row class="avatars">
+      <div *ngFor="let member of event?.members; let i = index">
+        <ion-avatar *ngIf="i < 5" class="avatar member">
+          <img [src]="member?.photo">
+        </ion-avatar>                    
+      </div>                  
+      <div class="yellow-photo">
+        <div class="avatar-text">+8</div>
+      </div>  
+    </ion-row>    
+    <ion-row>
+      <app-show-more class="show-more" [text]="showMoreText"></app-show-more>
+    </ion-row>
+    <ion-row class="leave-message">
+      <ion-input class="message" placeholder="Leave a message..."></ion-input>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-grid class="no-padding" *ngIf="posts?.length">
+    <ion-row *ngFor="let post of posts">
+      <ion-col size="12">
+        <app-post [item]="post"></app-post>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,25 @@
+.container {
+
+  .scheduler {
+    text-align: justify;
+    font-size: 4vw;
+    padding: 1vw;
+    overflow: hidden;
+    height: auto;  
+    // position: relative;
+  }
+
+  .show-more {
+    background-color: white;
+    font-size: 4vw;
+    font-weight: bold;
+    margin-top: -5.6vw;
+    cursor: pointer;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    
+    float: right;
+  }
+  
+}

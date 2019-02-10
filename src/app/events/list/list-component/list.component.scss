@@ -1,0 +1,26 @@
+.header {
+  .title {
+    font-weight: bold;
+    font-size: 4vw;
+    padding: 2vw;
+  }
+
+  .search {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  @media (min-width: 1025px) {
+    .search {
+      padding-left: 4vw;
+      padding-right: 4vw;
+      padding-top: 1vw;
+      padding-bottom: 1vw;
+    }
+  }
+
+  ion-searchbar {
+    font-family: "FontAwesome", Arial, sans-serif !important;
+  }  
+
+}

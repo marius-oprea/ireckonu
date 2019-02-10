@@ -1,0 +1,47 @@
+<ion-row class="item">
+  <ion-col size="4">
+    <div class="image">
+      <ion-img [src]="event.image"></ion-img>
+      <div class="date">{{ getDate() }}</div>
+      <div class="month">{{ getMonth() | uppercase }}</div>
+    </div>          
+  </ion-col>
+  <ion-col size="8">
+    <ion-grid>
+      <ion-row>
+        <div class="card-title">{{ event?.title | uppercase }}</div>
+      </ion-row>
+      <ion-row>
+        <div class="day-time">{{ getDayTime() }}</div>
+      </ion-row>
+      <ion-row class="members">
+        <div *ngFor="let member of event?.members; let i = index">
+          <ion-avatar *ngIf="i < 2" class="avatar">
+            <img [src]="member?.photo">
+          </ion-avatar>          
+        </div>
+        <div class="" *ngIf="event?.members?.length > 2">
+          <ion-grid class="others">
+            <div class="others-members">
+              + {{event?.members?.length - 2}} others
+            </div>            
+          </ion-grid>          
+        </div>
+      </ion-row>
+      <ion-row>
+        <div class="button" *ngIf="!hideGoing">
+          <ion-button (click)="onGoing($event)" [color]="goingColor">
+            <ion-icon *ngIf="hideIgnore"  name="checkmark"></ion-icon>
+            Going
+          </ion-button>
+        </div>                    
+        <div class="button" *ngIf="!hideIgnore">
+          <ion-button (click)="onIgnore($event)" [color]="ignoreColor">
+            <ion-icon *ngIf="hideGoing" name="close"></ion-icon>
+            Ignore
+          </ion-button>      
+        </div>              
+      </ion-row>
+    </ion-grid>                      
+  </ion-col>
+</ion-row>

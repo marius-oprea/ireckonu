@@ -1,0 +1,108 @@
+@import '../../../../theme/variables.scss';
+
+.header {
+  background-color: var(--ion-color-light);
+  height: 5vw;
+  width: 100%;
+}
+
+.post {
+  .grid {
+    padding: 3vw;
+  }
+
+  .avatar {
+    height: 15vw;
+    width: 15vw;
+  }
+
+  ion-grid, ion-col {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .name {
+    font-size: 4.5vw;
+    font-weight: bolder;
+    padding-left: 1vw;
+    padding-top: 1vw;
+  }
+
+  .shared-link {
+    font-size: 4.5vw;
+    font-weight: normal;
+    padding-left: 1vw;
+    padding-top: 1vw;
+  }
+ 
+  .link {
+    height: 50vw;
+  }
+
+  .time {
+    color: lightgray;
+    font-size: 5vw;
+    padding-top: 3vw;
+  }
+
+  .comment {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    text-align: justify;
+    font-size: 5vw;
+  }
+
+  .arrow {
+    margin-top: -12vw;
+    right: 9px;
+    position: absolute;
+    font-size: 8vw;
+  }
+
+  .highfives {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    padding-left: 1vw;
+  }
+
+  .icon {
+    font-size: 8vw;
+  }
+
+  .round {
+    border-radius: 5vw;
+    padding: 1vw;  
+  }
+
+  .green {
+    background-color: lightgreen;
+    color: white;
+  }
+
+  .blue {
+    background-color: lightblue;
+    color: white;
+  }
+
+  .icon-text {
+    font-size: 5vw;
+    float: right;
+    padding-top: 3vw;
+    padding-left: 2vw;
+    color: lightgray;
+  }
+
+  .feedback {
+    height: 10vw;
+    padding-left: 2vw;
+    padding-right: 10vw;
+    font-size: 5vw;
+    color: lightgray;
+  }
+
+  .text {
+    float: right;
+    display: block;
+    padding-top: 2vw;
+  }
+}

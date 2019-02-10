@@ -1,0 +1,19 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-title class="title ion-text-center" color="dark" mode="md">
+      EVENTS
+    </ion-title>
+  </ion-toolbar>
+  
+  <ion-toolbar color="light">
+    <ion-searchbar class="search ion-text-center ion-icon-center" searchIcon="none" animated="true" clearIcon="close" type="text" placeholder="&#xf002; Search event" debounce="100" (ionInput)="search($event);"></ion-searchbar>      
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content">
+    <app-card-group title="TODAY" [events]="todayEvents" type="0"></app-card-group>
+    <app-card-group title="THIS WEEK" [events]="thisWeekEvents" type="1"></app-card-group>
+    <app-card-group title="OTHER" [events]="otherEvents" type="2"></app-card-group>        
+  </div>
+</ion-content>
